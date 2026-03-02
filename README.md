@@ -4,6 +4,11 @@
 
 Esta metodología se basa en la investigación de Jinfei Zhu, de la Universidad de Chicago (Estados Unidos), quien en 2022 validó estos modelos para identificar las principales preocupaciones financieras a través de datos de Reddit."
 
+"Si bien el modelo base se apoya en la investigación de Jinfei Zhu (University of Chicago), nuestro aporte principal consiste en la transición de la teoría a la práctica mediante el desarrollo de un software interactivo.
+
+Mientras que el estudio original es un análisis estadístico estático de datos históricos, este proyecto escala dicha ciencia hacia una herramienta de gestión financiera preventiva. He diseñado una interfaz que traduce métricas complejas de NLP y carga cognitiva en indicadores visuales simples, permitiendo que un usuario común, sin conocimientos en finanzas o programación, pueda autoevaluar su bienestar emocional y económico en tiempo real."
+
+Como ejecutarlo:
 
 Plataforma interactiva diseñada para la gestión del bienestar económico y la reducción de la Carga Cognitiva. Este sistema integra Inteligencia Artificial para analizar el impacto emocional de las finanzas personales.
 

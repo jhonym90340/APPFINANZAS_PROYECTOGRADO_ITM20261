@@ -1,4 +1,4 @@
-# Sentido Financiero - Proyecto de Grado ITM 2026
+# Sentido Financiero - Proyecto de Grado ITM 2026-1 - INGENIERIA DE SISTEMAS
 
 Plataforma interactiva diseñada para la gestión del bienestar económico y la reducción de la Carga Cognitiva. Este sistema integra Inteligencia Artificial para analizar el impacto emocional de las finanzas personales.
 

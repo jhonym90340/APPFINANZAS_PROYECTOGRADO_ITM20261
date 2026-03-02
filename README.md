@@ -1,5 +1,10 @@
 # Sentido Financiero - Proyecto de Grado ITM 2026-1 - INGENIERIA DE SISTEMAS
 
+"El proyecto está desarrollado en Python 3.10, utilizando Streamlit para la interfaz de usuario. El análisis de datos se realizó con Pandas y la inteligencia artificial se implementó mediante NLTK para el análisis de sentimiento (VADER) y Scikit-learn para la extracción de relevancia temática mediante el algoritmo TF-IDF.
+
+Esta metodología se basa en la investigación de Jinfei Zhu, de la Universidad de Chicago (Estados Unidos), quien en 2022 validó estos modelos para identificar las principales preocupaciones financieras a través de datos de Reddit."
+
+
 Plataforma interactiva diseñada para la gestión del bienestar económico y la reducción de la Carga Cognitiva. Este sistema integra Inteligencia Artificial para analizar el impacto emocional de las finanzas personales.
 
  Características Principales

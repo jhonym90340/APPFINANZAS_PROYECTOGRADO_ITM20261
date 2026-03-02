@@ -1,23 +1,66 @@
-# Top Personal Finance Concerns: A Content Analysis Based on Reddit Data
-This repository contains data, python scripts and notebooks for Jinfei Zhu's (jinfei@uchicago.edu) content analysis project studying personal finance concerns.
+# Sentido Financiero - Proyecto de Grado ITM 2026
 
-Download Scraped Reddit corpora from Google Drive (Because GitHub has 100M size limit):
-`https://drive.google.com/drive/folders/1KgXh2D3YdoO-CfWUviPcpfgESOI9hMNG?usp=sharing`
+Plataforma interactiva diseñada para la gestión del bienestar económico y la reducción de la Carga Cognitiva. Este sistema integra Inteligencia Artificial para analizar el impacto emocional de las finanzas personales.
 
-# Reference
-Python LDA visualization https://github.com/bmabey/pyLDAvis
+ Características Principales
+Análisis de Bienestar: Uso de IA (NLP) para detectar niveles de estrés financiero.
+Cálculo de Salud: Evaluación heurística basada en ingresos y gastos fijos.
+Planificador: Medición de impacto de gastos en la estabilidad emocional.
+Evidencia Social: Explorador de datos históricos de Reddit (Crisis 2009).
 
-Blei, D. M., Ng, A. Y., & Jordan, M. I. (2003). Latent dirichlet allocation. the Journal of machine Learning research, 3, 993-1022.
+ Requisitos Previos
+Asegúrate de tener instalado:
+Python 3.10 o superior
+  Git
 
-Blei, D., & Lafferty, J. (2006). Dynamic Topic Models (Vol. 2006). https://doi.org/10.1145/1143844.1143859
+ Instalación y Configuración
 
-Evans, J., Desikan, B. S., & Kwon, H. (2021). Computational Contetn Analysis Notebooks and Slides. 
+Sigue estos pasos para ejecutar el proyecto en tu máquina local:
 
-Gareth James, D. W. T. H. (2013). An introduction to statistical learning : with applications in R. New York : Springer, [2013] ©2013.
+1. Clonar el repositorio:
+   
+   git clone [https://github.com/JHONYM90340/APPFINANZAS_PROYECTOGRADO_ITM20261.git](https://github.com/JHONYM90340/APPFINANZAS_PROYECTOGRADO_ITM20261.git)
+   cd APPFINANZAS_PROYECTOGRADO_ITM20261
 
-Reddit. (2021). Personal Finance Wiki https://www.reddit.com/r/personalfinance/wiki/index
 
-Federal Researve. (2018). Report on the Economic Well-Being of U.S. Households in 2017
+2. Crear un entorno virtual (Recomendado):
 
-Scikit-learn. (2021). CountVectorizer https://scikit-learn.org/stable/modules/generated/sklearn.feature_extraction.text.CountVectorizer.html
+Bash
+python -m venv venv
+
+
+3. Activar el entorno virtual:
+
+En Windows (PowerShell):
+
+Bash
+.\venv\Scripts\Activate.ps1
+En macOS/Linux:
+
+Bash
+source venv/bin/activate
+Instalar dependencias:
+
+Bash
+pip install -r requirements.txt
+
+
+
+
+
+4. Instalar dependencias:
+
+Bash
+pip install -r requirements.txt
+
+
+
+5. Ejecución de la App
+Para iniciar el servidor local de Streamlit, ejecuta el siguiente comando:
+
+Bash
+python -m streamlit run app_ayuda_financiera.py
+
+
+Una vez ejecutado, la aplicación se abrirá automáticamente en tu navegador en http://localhost:8501.
 

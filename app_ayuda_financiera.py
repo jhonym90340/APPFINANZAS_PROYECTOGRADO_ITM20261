@@ -6,10 +6,7 @@ from nltk.sentiment.vader import SentimentIntensityAnalyzer
 # 1. MOTOR DE IA
 try:
     sid = SentimentIntensityAnalyzer()
-except:
-    import nltk
-    nltk.download('vader_lexicon')
-    sid = SentimentIntensityAnalyzer()
+
 
 # 2. CONFIGURACIÓN DE PÁGINA
 st.set_page_config(page_title="Sentido Financiero PRO", layout="wide")
@@ -89,8 +86,7 @@ with tabs[1]:
                     st.error(f"Interpretación: Tu estado refleja estrés financiero crónico.")
                 else:
                     st.success(f"Interpretación: Reflejas control emocional y resiliencia.")
-    with col_s2:
-        st.image("https://images.unsplash.com/photo-1506126613408-eca07ce68773?q=80&w=1000", caption="Equilibrio Mental", use_container_width=True)
+   
 
 # --- TAB 3: CONECTA (CON RETROALIMENTACIÓN) ---
 with tabs[2]:
@@ -148,57 +144,4 @@ with tabs[3]:
     else:
         st.info("Ingresa tus datos en la pestaña CONECTA.")
 
-# --- TAB 5: PLANIFICADOR (CON RETROALIMENTACIÓN) ---
-with tabs[4]:
-    st.header("Planificador de Decisiones")
-    st.markdown("**Psicología del Gasto:** Evaluar el impacto de una compra antes de realizarla permite que tu cerebro pase del sistema emocional al racional.")
-    col_p1, col_p2 = st.columns([1, 1.5])
-    with col_p1:
-        st.image("https://images.unsplash.com/photo-1556740738-b6a63e27c4df?q=80&w=1000", caption="Planificación Financiera", use_container_width=True)
-    with col_p2:
-        prod_n = st.text_input("¿Qué producto o servicio tienes en mente?")
-        p_deseo = st.number_input("Precio estimado", min_value=0)
-        if st.button("ANALIZAR IMPACTO"):
-            if 'user_ing' in st.session_state and prod_n:
-                imp = (p_deseo / st.session_state['user_ing']) * 100
-                st.subheader(f"Análisis para: {prod_n}")
-                st.write(f"Impacto: **{imp:.1f}%** de tus ingresos del mes.")
-                
-                if imp > 15:
-                    st.error("**Retroalimentación:** Impacto Crítico. Este gasto consumirá gran parte de tu flujo de caja, lo que elevará tus niveles de estrés al reducir tu ahorro.")
-                else:
-                    st.success("**Retroalimentación:** Impacto Bajo. Esta compra es segura y no desestabiliza tu paz mental.")
-            else:
-                st.error("Ingresa tus ingresos en la pestaña CONECTA.")
-
-# --- TAB 6: ACCIÓN ---
-with tabs[5]:
-    st.header("Tu Ruta de Acción Personalizada")
-    if 'user_ratio' in st.session_state:
-        u_ratio = st.session_state['user_ratio']
-        u_score = st.session_state.get('last_score', 0)
-        col_acc1, col_acc2 = st.columns(2)
-        with col_acc1:
-            st.image("https://images.unsplash.com/photo-1460925895917-afdab827c52f?q=80&w=1000", caption="Ruta Estratégica", use_container_width=True)
-        with col_acc2:
-            if u_ratio > 50:
-                st.markdown("<div class='info-box'><strong>Prioridad: Reducción.</strong> Tu ratio es alto. Audita tus deudas.</div>", unsafe_allow_html=True)
-            if u_score <= -0.05:
-                st.markdown("<div class='info-box'><strong>Prioridad: Calma.</strong> Evita decisiones financieras importantes hoy.</div>", unsafe_allow_html=True)
-            if u_ratio <= 50 and u_score > -0.05:
-                st.markdown("<div class='info-box'><strong>Prioridad: Fortalecimiento.</strong> Estás en zona segura.</div>", unsafe_allow_html=True)
-    else:
-        st.warning("Completa tus datos en CONECTA.")
-
-# --- TAB 7: ESTUDIO (SOLO DATOS DE INVESTIGACIÓN) ---
-with tabs[6]:
-    st.header("Evidencia Estadística del Proyecto")
-    st.write("Resultados consolidados de la investigación académica (N=264).")
-    st.dataframe(df_inv, use_container_width=True)
-    
-    fig3, ax3 = plt.subplots()
-    ax3.pie(df_inv['Frecuencia'], labels=df_inv['Categoría'], autopct='%1.1f%%', colors=['#3AB1D6', '#2D8DAA', '#1e3a8a', '#c3cfe2'])
-    st.pyplot(fig3)
-
-st.markdown("<br><hr><center>Sentido Financiero 2026</center>", unsafe_allow_html=True)
 

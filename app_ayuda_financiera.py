@@ -97,23 +97,4 @@ with tabs[3]:
     Contrastamos tu situación (Línea Azul) contra los **Puntos Críticos** (Barras Grises) obtenidos en el estudio (N=264). 
     Los puntos críticos representan el nivel donde los participantes reportaron niveles de ansiedad clínica.
     """)
-    if 'user_ratio' in st.session_state:
-        u_ratio = st.session_state['user_ratio']
-        fig2, ax2 = plt.subplots(figsize=(10, 4))
-        ax2.bar(df_inv['Categoría'], df_inv['Punto_Critico_Promedio'], color='#CBD5E1', label='Umbral Crítico de Ansiedad')
-        ax2.axhline(u_ratio, color='#3AB1D6', linestyle='--', linewidth=3, label='Tu Nivel Actual')
-        ax2.legend()
-        st.pyplot(fig2)
-        
-        avg_critico = df_inv['Punto_Critico_Promedio'].mean()
-        diff = u_ratio - avg_critico
-        st.markdown("---")
-        st.subheader("Retroalimentación Basada en Datos")
-        if u_ratio > avg_critico:
-            st.error(f"Te encuentras un **{abs(diff):.1f}% por encima** del promedio crítico de riesgo. Esto sugiere una carga cognitiva superior a la media segura de la población estudiada.")
-        else:
-            st.success(f"Te encuentras un **{abs(diff):.1f}% por debajo** del promedio crítico. Tus datos indican un margen de maniobra financiero saludable.")
-    else:
-        st.info("Ingresa tus datos en la pestaña CONECTA.")
-
-
+ 

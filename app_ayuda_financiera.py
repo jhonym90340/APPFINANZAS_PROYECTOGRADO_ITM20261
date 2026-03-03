@@ -27,16 +27,7 @@ st.markdown("""
         box-shadow: 0 10px 25px rgba(0,0,0,0.05) !important;
         margin-bottom: 20px;
         border: none !important;
-    }
 
-    .stButton>button {
-        background: linear-gradient(to right, #3AB1D6, #2D8DAA);
-        color: white; border-radius: 50px; font-weight: 700; padding: 15px 30px; width: 100%; text-transform: uppercase; border: none;
-    }
-    
-    .info-box { background: #E0F2FE; padding: 20px; border-radius: 15px; border-left: 5px solid #0284C7; margin-bottom: 20px; }
-    </style>
-    """, unsafe_allow_html=True)
 
 # --- DATOS DE INVESTIGACIÓN (MUESTRA ACADÉMICA) ---
 datos_investigacion = {
@@ -98,24 +89,7 @@ with tabs[2]:
     * **Gastos Fijos:** Compromisos que NO puedes evadir (arriendo, servicios, cuotas). 
     * **Índice de Salud:** Relación porcentual entre gastos e ingresos. El límite saludable es el **50%**.
     """)
-    col_c1, col_c2 = st.columns([1, 1.5])
-    with col_c1:
-        st.image("https://images.unsplash.com/photo-1554224155-6726b3ff858f?q=80&w=1000", caption="Análisis de Gastos", use_container_width=True)
-    with col_c2:
-        ing_val = st.number_input("Ingresos mensuales netos", min_value=1, value=2000)
-        gas_val = st.number_input("Total Gastos fijos", min_value=1, value=1000)
-        ratio = (gas_val / ing_val) * 100
-        st.session_state['user_ratio'] = ratio
-        st.session_state['user_ing'] = ing_val
-        st.metric("Índice de Salud", f"{ratio:.1f}%")
-        
-        st.markdown("### 💡 Retroalimentación")
-        if ratio <= 30:
-            st.success("**Estado: Seguridad Alta.** Tienes una gran libertad financiera, lo que reduce drásticamente tu carga cognitiva.")
-        elif 30 < ratio <= 50:
-            st.info("**Estado: Equilibrio.** Estás en el rango manejable, pero debes vigilar nuevos gastos.")
-        else:
-            st.warning("**Estado: Carga Elevada.** Tu salud mental podría estar en riesgo por el alto compromiso de ingresos.")
+ 
 
 # --- TAB 4: COMPARATIVA (CON RETROALIMENTACIÓN ESTADÍSTICA) ---
 with tabs[3]:

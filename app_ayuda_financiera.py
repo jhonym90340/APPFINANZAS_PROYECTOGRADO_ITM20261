@@ -52,9 +52,7 @@ with tabs[0]:
         y el estrés económico. Compara tu situación financiera actual con promedios críticos 
         identificados en nuestra investigación académica de 264 casos reales. 
         """)
-        st.button("EMPEZAR EXPERIENCIA")
-    with col_i:
-        st.image("https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?q=80&w=1000", caption="Gestión Profesional", use_container_width=True)
+      
 
 # --- TAB 2: BIENESTAR (CON DESCRIPCIÓN) ---
 with tabs[1]:
